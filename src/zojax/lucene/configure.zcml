@@ -1,0 +1,33 @@
+<configure
+   xmlns="http://namespaces.zope.org/zope"
+   i18n_domain="zojax">
+
+  <include package="zojax.lucene.server" />
+  <include package="zojax.lucene.browser" />
+
+  <class class=".index.LuceneTextIndex">
+    <factory
+       id="zojax.lucene.LuceneTextIndex"
+       title="Lucene Text Index" />
+
+    <require
+       permission="zope.ManageContent"
+       interface=".interfaces.ILuceneIndex"
+       set_schema=".interfaces.ILuceneIndex" />
+  </class>
+
+  <subscriber
+     for="zope.app.intid.interfaces.IIntIdAddedEvent"
+     handler=".subscribers.modifiedHandler" />
+
+  <subscriber
+     for="zope.lifecycleevent.interfaces.IObjectModifiedEvent"
+     handler=".subscribers.modifiedHandler" />
+
+  <subscriber
+     for="zope.app.intid.interfaces.IIntIdRemovedEvent"
+     handler=".subscribers.removedHandler" />
+
+  <include file="product.zcml" />
+
+</configure>

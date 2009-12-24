@@ -1,0 +1,21 @@
+<configure
+   xmlns="http://namespaces.zope.org/zope"
+   xmlns:browser="http://namespaces.zope.org/browser"
+   i18n_domain="zojax">
+
+  <registerIn registry="zojax.product.zojax-lucene">
+    <browser:menuItem
+       for="..interfaces.ILuceneProduct"
+       menu="zmi_views"
+       title="View"
+       action="@@index.html"
+       permission="zojax.ManageProducts" />
+
+    <browser:page
+       for="..interfaces.ILuceneProduct"
+       name="index.html"
+       class=".product.LuceneProduct"
+       permission="zojax.ManageProducts" />
+  </registerIn>
+
+</configure>

@@ -1,0 +1,10 @@
+<configure xmlns="http://namespaces.zope.org/zope">
+
+  <subscriber handler=".subscribers.startLucene" />
+
+  <utility
+     name="zojax.lucene.servers"
+     provides="zope.schema.interfaces.IVocabularyFactory"
+     factory=".vocabulary.LuceneVocabulary" />
+
+</configure>

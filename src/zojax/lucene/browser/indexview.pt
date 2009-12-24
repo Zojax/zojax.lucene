@@ -1,0 +1,31 @@
+<html metal:use-macro="context/@@standard_macros/view" i18n:domain="zojax">
+  <body>
+    <div metal:fill-slot="body"
+	 tal:define="stats view/getStatistics">
+      <h1 i18n:translate="">Lucene Text Index</h1>
+      <div class="documentDescription" i18n:translate="">
+	Using lucene text search engine for full text searching.
+      </div>
+
+      <tal:block  i18n:translate="">Document count: 
+	<tal:block i18n:name="documents" content="stats/documents" />
+      </tal:block>
+    </div>
+
+    <div metal:fill-slot="page-bottom" class="frame">
+      <h1 i18n:translate="">Advanced actions</h1>
+      <br />
+
+      <form action="@@index.html" method="post">
+	<div i18n:translate="">Reindex all indexed documents.</div>
+	<input class="context" type="submit" name="advanced.reindexAll" 
+	       value="Process" i18n:attributes="value" />
+	<br /><br />
+
+	<div i18n:translate="">Search and reindex all possible documents.</div>
+	<input class="context" type="submit" name="advanced.reindexAll" 
+	       value="Process" i18n:attributes="value" />
+      </form>
+    </div>
+  </body>
+</html>

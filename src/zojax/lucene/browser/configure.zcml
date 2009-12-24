@@ -1,0 +1,52 @@
+<configure
+   xmlns="http://namespaces.zope.org/zope"
+   xmlns:browser="http://namespaces.zope.org/browser"
+   i18n_domain="zojax">
+
+  <browser:icon
+     name="zmi_icon"
+     for="..interfaces.ILuceneIndex"
+     file="lucene-icon.gif" />
+
+  <browser:addform
+     name="addLuceneIndex"
+     label="Add a lucene index"
+     schema="..interfaces.ILuceneIndex"
+     permission="zope.ManageServices"
+     content_factory="..index.LuceneTextIndex" />
+
+  <browser:addMenuItem
+     title="Lucene Index"
+     description="Index based on a apache lucene index"
+     class="..index.LuceneTextIndex"
+     permission="zope.ManageServices"
+     view="addLuceneIndex" />
+
+  <browser:menuItem
+     for="..interfaces.ILuceneIndex"
+     menu="zmi_views"
+     title="View"
+     action="@@index.html"
+     permission="zope.ManageServices" />
+
+  <browser:page
+     for="..interfaces.ILuceneIndex"
+     name="index.html"
+     template="indexview.pt"
+     class=".indexview.IndexView"
+     permission="zope.ManageServices" />
+
+  <browser:menuItem
+     for="..interfaces.ILuceneIndex"
+     menu="zmi_views"
+     title="Edit"
+     action="@@edit.html"
+     permission="zope.ManageServices" />
+
+  <browser:page
+     for="..interfaces.ILuceneIndex"
+     name="edit.html"
+     class=".indexedit.LuceneConfiguration"
+     permission="zope.ManageServices" />
+
+</configure>

@@ -1,0 +1,33 @@
+<configure
+   xmlns="http://namespaces.zope.org/zope"
+   xmlns:zcml="http://namespaces.zope.org/zcml"
+   xmlns:zojax="http://namespaces.zope.org/zojax"
+   i18n_domain="zojax">
+
+  <zcml:configure zcml:condition="installed zojax.product">
+    <include package="zojax.product" />
+
+    <zojax:product
+       name="zojax-lucene"
+       title="Lucene Text Index"
+       description="Using lucene text search engine for full text searching."
+       schema=".interfaces.ILuceneProduct"
+       class=".product.LuceneInstaller"
+       configurable="true" />
+
+    <class class=".product.PortalLuceneIndex">
+      <require
+	 permission="zojax.ManageProducts"
+	 interface=".interfaces.ILuceneIndex"
+	 set_schema=".interfaces.ILuceneIndex" />
+    </class>
+
+    <class class=".product.PortalLuceneIndex"
+	   zcml:condition="installed zojax.catalog">
+      <implements interface="zojax.catalog.interfaces.IFullTextIndex" />
+    </class>
+
+    <include package="zojax.lucene.browser" file="product.zcml" />
+  </zcml:configure>
+
+</configure>

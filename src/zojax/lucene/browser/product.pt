@@ -1,0 +1,21 @@
+<div class="frame" tal:define="stats view/getStatistics" i18n:domain="zojax">
+  <h1 i18n:translate="">Lucene Text Index</h1>
+  <div class="documentDescription" i18n:translate="">
+    Using lucene text search engine for full text searching.
+  </div>
+
+  <tal:block i18n:translate="">Document count: 
+    <tal:block i18n:name="documents" content="stats/documents" />
+  </tal:block>
+</div>
+
+<div class="frame">
+  <h1 i18n:translate="">Advanced actions</h1>
+  <br />
+  
+  <form action="@@index.html" method="post">
+    <div i18n:translate="">Reindex all indexed documents.</div>
+    <input class="context" type="submit" name="advanced.reindexAll"
+	   value="Process" i18n:attributes="value" />
+  </form>
+</div>
