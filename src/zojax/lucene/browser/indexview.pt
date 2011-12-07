@@ -1,4 +1,4 @@
-<html metal:use-macro="context/@@standard_macros/view" i18n:domain="zojax">
+<html metal:use-macro="context/@@standard_macros/view" i18n:domain="zojax.lucene">
   <body>
     <div metal:fill-slot="body"
 	 tal:define="stats view/getStatistics">

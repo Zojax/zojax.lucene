@@ -1,4 +1,4 @@
-<div class="frame" tal:define="stats view/getStatistics" i18n:domain="zojax">
+<div class="frame" tal:define="stats view/getStatistics" i18n:domain="zojax.lucene">
   <h1 i18n:translate="">Lucene Text Index</h1>
   <div class="documentDescription" i18n:translate="">
     Using lucene text search engine for full text searching.

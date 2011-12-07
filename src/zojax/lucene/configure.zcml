@@ -1,6 +1,6 @@
 <configure
    xmlns="http://namespaces.zope.org/zope"
-   i18n_domain="zojax">
+   i18n_domain="zojax.lucene">
 
   <include package="zojax.lucene.server" />
   <include package="zojax.lucene.browser" />

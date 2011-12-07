@@ -2,7 +2,7 @@
    xmlns="http://namespaces.zope.org/zope"
    xmlns:zcml="http://namespaces.zope.org/zcml"
    xmlns:zojax="http://namespaces.zope.org/zojax"
-   i18n_domain="zojax">
+   i18n_domain="zojax.lucene">
 
   <zcml:configure zcml:condition="installed zojax.product">
     <include package="zojax.product" />

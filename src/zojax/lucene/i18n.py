@@ -16,4 +16,4 @@
 $Id$
 """
 from zope.i18nmessageid import MessageFactory
-_ = MessageFactory('zojax')
+_ = MessageFactory('zojax.lucene')
