@@ -1,0 +1,80 @@
+##############################################################################
+#
+# Copyright (c) 2003-2004 Zope Corporation and Contributors.
+# All Rights Reserved.
+#
+# This software is subject to the provisions of the Zope Public License,
+# Version 2.1 (ZPL).  A copy of the ZPL should accompany this distribution.
+# THIS SOFTWARE IS PROVIDED "AS IS" AND ANY AND ALL EXPRESS OR IMPLIED
+# WARRANTIES ARE DISCLAIMED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+# WARRANTIES OF TITLE, MERCHANTABILITY, AGAINST INFRINGEMENT, AND FITNESS
+# FOR A PARTICULAR PURPOSE.
+#
+##############################################################################
+msgid ""
+msgstr ""
+"Project-Id-Version: Development/Unknown\n"
+"POT-Creation-Date: Thu Dec  8 23:01:43 2011\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: Zope 3 Developers <zope3-dev@zope.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: zope/app/locales/extract.py\n"
+
+#: src/zojax/lucene/browser/indexedit.py:28
+#: src/zojax/lucene/browser/product.py:35
+#: src/zojax/lucene/browser/product.pt:2
+#: src/zojax/lucene/browser/indexview.pt:5
+msgid "Lucene Text Index"
+msgstr ""
+
+#: src/zojax/lucene/browser/indexedit.py:29
+#: src/zojax/lucene/browser/product.py:36
+#: src/zojax/lucene/browser/product.pt:3
+#: src/zojax/lucene/browser/indexview.pt:6
+msgid "Using lucene text search engine for full text searching."
+msgstr ""
+
+#: src/zojax/lucene/browser/indexview.pt:25
+msgid "Search and reindex all possible documents."
+msgstr ""
+
+#: src/zojax/lucene/browser/product.pt:13
+msgid "Advanced actions"
+msgstr ""
+
+#: src/zojax/lucene/browser/product.pt:17
+msgid "Reindex all indexed documents."
+msgstr ""
+
+#: src/zojax/lucene/browser/product.pt:18
+msgid "Process"
+msgstr ""
+
+#: src/zojax/lucene/browser/product.pt:8
+#: src/zojax/lucene/browser/indexview.pt:11
+msgid "Document count: ${documents}"
+msgstr ""
+
+#: src/zojax/lucene/browser/product.py:66
+msgid "Reindex process has been completed."
+msgstr ""
+
+#: src/zojax/lucene/interfaces.py:30
+msgid "Lucene Server"
+msgstr ""
+
+#: src/zojax/lucene/interfaces.py:31
+msgid "Select configured lucene server."
+msgstr ""
+
+#: src/zojax/lucene/interfaces.py:37
+msgid "Default language"
+msgstr ""
+
+#: src/zojax/lucene/interfaces.py:38
+msgid "Select default language of indexed text."
+msgstr ""
+

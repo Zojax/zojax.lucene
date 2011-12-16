@@ -1,6 +1,9 @@
 <configure
    xmlns="http://namespaces.zope.org/zope"
+   xmlns:i18n="http://namespaces.zope.org/i18n"
    i18n_domain="zojax.lucene">
+
+  <i18n:registerTranslations directory="locales" />
 
   <include package="zojax.lucene.server" />
   <include package="zojax.lucene.browser" />
